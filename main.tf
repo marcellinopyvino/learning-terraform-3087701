@@ -48,7 +48,7 @@ resource "aws_instance" "web" {
     tags = {
       Terraforn = "true"
     }
-    vpc_id = data.aws_vpc.default.id
+    vpc_id = module.blog_vpc.vpc_id
   } 
 
   module "blog_sg" {
